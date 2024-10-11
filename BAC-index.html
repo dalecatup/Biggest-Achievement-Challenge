@@ -18,122 +18,128 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <title>Biggest Achievement 🏆 Challenge</title>
     <style>
+      body {
+        background-color: #ffffff;
+        font-family: "Questrial", sans-serif;
+        color: #363b4e;
+      }
 
-                            body {
-                              background-color: #ffffff;
-                              font-family: "Questrial", sans-serif;
-                              color: #363b4e;
-                            }
+      main {
+        margin: 0 auto;
+      }
 
-                            main{
-                              margin: 0 auto;
-                            }
+      .page-container {
+        max-width: 100%;
+        padding: 0px;
+        background-color: #d6bcd4;
+        border: none;
+      }
 
-                      .page-container {
-                          max-width: 100%;
-                          padding: 0px;
-                          background-color:  #d6bcd4;
-                          border: none;
-                      }
+      .grid-container {
+        max-width: 1080px;
+        display: grid;
+        grid-template-rows: auto;
+        gap: 20px;
+        padding: 0px;
+        margin: 0 auto;
+        border: none;
+      }
 
-                      .grid-container {
-                          max-width: 1080px;
-                          display: grid;
-                          grid-template-rows: auto;
-                          gap: 20px;
-                          padding: 0px;
-                          margin: 0 auto;
-                          border: none;
-                      }
+      .intro-images {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        margin: 0 auto;
+        border: none;
+      }
 
-                      .intro-images {
-                          display: flex;
-                          justify-content: space-between;
-                          align-items: center;
-                          gap: 15px;
-                          margin: 0 auto;
-                          border: none;
-                      }
+      .intro-images img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+      }
 
-                      .intro-images img {
-                          width: 300px;
-                          height: 300px;
-                          object-fit: cover;
-                      }
+      .intro-images img:hover {
+        transform: scale(1.5);
+      }
 
-                      .text-section {
-                          text-align: center;
-                          flex: 1;
-                      }
+      .text-section {
+        text-align: center;
+        flex: 1;
+      }
 
-                      .section-header {
-                          margin: 0;
-                          margin-bottom: 30px;
-                          font-size: 30px;
-                      }
+      .section-header {
+        margin: 0;
+        margin-bottom: 30px;
+        font-size: 30px;
+      }
 
-                      .section-subheader {
-                          margin: 5px 0;
-                          margin top: 20px;
-                          margin-bottom: 20px;
-                      }
-                      .about-achievement-text {
-                          margin: 10px 0;
-                          font-size: 15px;
-                          text-align: justify;
-                          font-family: "Didact Gothic", sans-serif;
-                          padding-top: 7px;
-                      }
+      .section-subheader {
+        margin: 5px 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
 
-                      .flex-container {
-                        display: flex;
-                        justify-content: space-between;
-                        flex-wrap: wrap;
-                        max-width: 1080px;
-                        margin: 20px auto;
-              }
+      .about-achievement-text {
+        margin: 10px 0;
+        font-size: 15px;
+        text-align: justify;
+        font-family: "Albert Sans", sans-serif;
+        padding-top: 7px;
+      }
 
-                    .bubble-journey-container,
-                    .bubble-cbt-container {
-                    flex: 1;
-                    max-width: 48%;
-                    margin: 10px;
-                    background-color: #fafad6;
-                    padding: 20px;
-                    border-radius: 20px;
-                    font-family: "Didact Gothic", sans-serif;
-                 }
+      .flex-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1400px;
+        margin: 20px auto;
+      }
 
-              .official-button,
-              .training-button {
-                margin-top: 10px;
-                padding: 10px 15px;
-                background-color: #007bff;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
+      .bubble-journey-container,
+      .bubble-cbt-container {
+        flex: 2;
+        margin: 10px;
+        background-color: #fafad6;
+        padding: 30px;
+        border-radius: 20px;
+        font-family: "Albert Sans", sans-serif;
+        font-size: 15px;
+        width: 100%;
+        max-width: 700px;
+      }
 
-              }
+      .official-button,
+      .training-button {
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
 
-              .official-button {
-                margin-left: 50px;
-              }
-            .training-button {
-                margin-left: 50px;
-             }
+      .official-button {
+        margin-left: 70px;
+      }
 
-              .official-button:hover,
-              .training-button:hover {
-                background-color: #0056b3;
-              }
+      .training-button {
+        margin-left: 70px;
+      }
 
-              .tips-container {
+      .official-button:hover,
+      .training-button:hover {
+        background-color: #0056b3;
+      }
+
+      .tips-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
@@ -146,7 +152,11 @@
       }
 
       .title {
-        font-size: 25px;
+        font-size: 22px;
+      }
+
+      .icon {
+        font-size: 20px;
       }
     </style>
   </head>
@@ -168,8 +178,13 @@
               alt="Me on a motorbike"
             />
             <div class="text-section">
-              <h1 class="section-header">My Biggest Achievement 🏆</h1>
-              <h2 class="section-subheader">Earning a CBT Certificate</h2>
+              <h1 class="section-header">My Biggest Achievement</h1>
+              <h2 class="section-subheader">
+                🏆 🛵 📜
+                <br />
+                <br />
+                Earning a CBT Certificate
+              </h2>
             </div>
             <img
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/308/original/MBR-Motorbike2.jpg?1728056395"
@@ -185,15 +200,14 @@
           <div class="section-journey">
             <h2 class="journey-header">My CBT journey</h2>
             <p class="journey-text">
-              I had wanted to ride a motorbike for so long and in the UK, a CBT
-              is required to ride on public roads. For me, completing it wasn’t
-              just about gaining the necessary skills and certification; it was
-              an opportunity to push my limits and achieve a long-held dream.
-              Learning to ride tested my focus, balance, and determination, but
-              receiving my certificate at the end of a long day was an
-              exhilarating moment of success. With this achievement under my
-              belt, I’m now looking forward to pursuing my full motorcycle
-              licence in the near future.
+              I had always wanted to ride a motorbike, and in the UK, completing
+              a CBT is essential for riding on public roads. For me, it wasn’t
+              just about getting certified; it was about pushing my limits and
+              fulfilling a long-time dream. The training challenged my focus,
+              balance, and determination, but receiving my certificate at the
+              end of the day was incredibly rewarding. Now, I’m excited to take
+              the next step and pursue my full motorcycle licence in the near
+              future.
             </p>
           </div>
         </div>
@@ -209,22 +223,29 @@
               to ride on public roads for two years (with an L plate) on
               motorbikes up to 125cc.
             </p>
-            <button class="official-button" id="official-button">
-              Official CBT Information
-            </button>
-            <button class="training-button" id="training-button">
-              Find a Training centre
-            </button>
           </div>
         </div>
       </div>
       <!-- Section 4 -->
+      <div class="buttons">
+        <button class="official-button" id="official-button">
+          Official CBT Information
+        </button>
+        <button class="training-button" id="training-button">
+          Find a Training centre
+        </button>
+      </div>
+      <!-- Section 5 -->
       <div class="tips">
         <h2 class="tips-header">Tips for new riders</h2>
         <div class="tips-container">
           <div class="tip">
             <p>
-              <span class="title">🦥 <br /><strong>Start Slow</strong></span>
+              <span class="title">
+                <span class="icon">🦥</span> <br /><strong
+                  >Start Slow</strong
+                ></span
+              >
               <br />
               After earning your CBT certificate, take your time to practice
               riding in safe, low-traffic areas to build your confidence.
@@ -232,7 +253,11 @@
           </div>
           <div class="tip">
             <p>
-              <span class="title">🏍 <br /><strong>Wear Full Gear</strong></span>
+              <span class="title"
+                ><span class="icon">🐱‍🚀</span> <br /><strong
+                  >Wear Full Gear</strong
+                ></span
+              >
               <br />
               Always use proper riding gear, not just a helmet. Protective
               clothing, gloves, and boots can significantly enhance your safety.
@@ -241,7 +266,9 @@
           <div class="tip">
             <p>
               <span class="title"
-                >👁 <br /><strong>Remember Your Checks</strong></span
+                ><span class="icon">💥</span> <br /><strong
+                  >Remember Your Checks</strong
+                ></span
               >
               <br />
               Always perform thorough checks before maneuvering: check your
@@ -250,9 +277,11 @@
           </div>
           <div class="tip">
             <p>
-              📰
-              <br />
-              <strong>Stay Informed</strong>
+              <span class="title">
+                <span class="icon">📰</span>
+                <br />
+                <strong>Stay Informed</strong></span
+              >
               <br />
               Read up on road safety and motorcycle handling tips to enhance
               your skills. Resources like
