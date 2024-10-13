@@ -33,7 +33,17 @@
         margin: 0 auto;
       }
 
-      .page-container {
+      .container {
+        max-width: 1080px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 20px;
+        display: block;
+        border: 1px solid;
+        border-color: #9a9a9a;
+      }
+
+      .title-container {
         max-width: 100%;
         padding: 0px;
         background-color: #d6bcd4;
@@ -105,9 +115,10 @@
       .bubble-journey-container,
       .bubble-cbt-container {
         flex: 2;
-        margin: 10px;
+        margin: 5px;
         background-color: #fafad6;
         padding: 30px;
+        padding-top: 15px;
         border-radius: 20px;
         font-family: "Albert Sans", sans-serif;
         font-size: 15px;
@@ -168,126 +179,142 @@
       </div>
     </header>
     <main>
-      <!-- Section 1 -->
-      <div class="page-container">
-        <div class="grid-container">
-          <div class="intro-images">
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/137/original/MBR-motorbike.jpg?1727970699"
-              class="motorbike-me"
-              alt="Me on a motorbike"
-            />
-            <div class="text-section">
-              <h1 class="section-header">My Biggest Achievement</h1>
-              <h2 class="section-subheader">
-                🏆 🛵 📜
-                <br />
-                <br />
-                Earning a CBT Certificate
-              </h2>
+      <div class="container">
+        <!-- Section 1 -->
+        <div class="title-container">
+          <div class="grid-container">
+            <div class="intro-images">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/137/original/MBR-motorbike.jpg?1727970699"
+                class="motorbike-me"
+                alt="Me on a motorbike"
+              />
+              <div class="text-section">
+                <h1 class="section-header">My Biggest Achievement</h1>
+                <h2 class="section-subheader">
+                  🏆 🛵 📜
+                  <br />
+                  <br />
+                  Earning a CBT Certificate
+                </h2>
+              </div>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/308/original/MBR-Motorbike2.jpg?1728056395"
+                class="motorbike-alone"
+                alt="Motorbike alone"
+              />
             </div>
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/308/original/MBR-Motorbike2.jpg?1728056395"
-              class="motorbike-alone"
-              alt="Motorbike alone"
-            />
           </div>
         </div>
-      </div>
-      <div class="flex-container">
-        <!-- Section 2 -->
-        <div class="bubble-journey-container">
-          <div class="section-journey">
-            <h2 class="journey-header">My CBT journey</h2>
-            <p class="journey-text">
-              I had always wanted to ride a motorbike, and in the UK, completing
-              a CBT is essential for riding on public roads. For me, it wasn’t
-              just about getting certified; it was about pushing my limits and
-              fulfilling a long-time dream. The training challenged my focus,
-              balance, and determination, but receiving my certificate at the
-              end of the day was incredibly rewarding. Now, I’m excited to take
-              the next step and pursue my full motorcycle licence in the near
-              future.
-            </p>
+        <div class="flex-container">
+          <!-- Section 2 -->
+          <div class="bubble-journey-container">
+            <div class="section-journey">
+              <h2 class="journey-header">My CBT journey</h2>
+              <p class="journey-text">
+                I had always wanted to ride a motorbike, and in the UK,
+                completing a CBT is essential for riding on public roads. For
+                me, it wasn’t just about getting certified; it was about pushing
+                my limits and fulfilling a long-time dream. The training
+                challenged my focus, balance, and determination, but receiving
+                my certificate at the end of the day was incredibly rewarding.
+                Now, I’m excited to take the next step and pursue my full
+                motorcycle licence in the near future.
+              </p>
+            </div>
+          </div>
+          <!-- Section 3 -->
+          <div class="bubble-cbt-container">
+            <div class="section-about-cbt">
+              <h2 class="about-cbt-header">What is CBT?</h2>
+              <p class="about-cbt-text">
+                The CBT (Compulsory Basic Training) is a one-day course in the
+                United Kingdom that ensures new riders understand road safety,
+                bike control, and essential skills for riding a motorbike. Upon
+                successful completion, the DL196 certificate is awarded and
+                allows to ride on public roads for two years (with an L plate)
+                on motorbikes up to 125cc.
+              </p>
+            </div>
           </div>
         </div>
-        <!-- Section 3 -->
-        <div class="bubble-cbt-container">
-          <div class="section-about-cbt">
-            <h2 class="about-cbt-header">What is CBT?</h2>
-            <p class="about-cbt-text">
-              The CBT (Compulsory Basic Training) is a one-day course in the
-              United Kingdom that ensures new riders understand road safety,
-              bike control, and essential skills for riding a motorbike. Upon
-              successful completion, the DL196 certificate is awarded and allows
-              to ride on public roads for two years (with an L plate) on
-              motorbikes up to 125cc.
-            </p>
-          </div>
+        <!-- Section 4 -->
+        <div class="section-about-cbt">
+ <div class="intro-images">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/137/original/MBR-motorbike.jpg?1727970699"
+                class="motorbike-me"
+                alt="Me on a motorbike"
+              />
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/308/original/MBR-Motorbike2.jpg?1728056395"
+                class="motorbike-alone"
+                alt="Motorbike alone"
+              />
         </div>
-      </div>
-      <!-- Section 4 -->
-      <div class="buttons">
-        <button class="official-button" id="official-button">
-          Official CBT Information
-        </button>
-        <button class="training-button" id="training-button">
-          Find a Training centre
-        </button>
-      </div>
-      <!-- Section 5 -->
-      <div class="tips">
-        <h2 class="tips-header">Tips for new riders</h2>
-        <div class="tips-container">
-          <div class="tip">
-            <p>
-              <span class="title">
-                <span class="icon">🦥</span> <br /><strong
-                  >Start Slow</strong
-                ></span
-              >
-              <br />
-              After earning your CBT certificate, take your time to practice
-              riding in safe, low-traffic areas to build your confidence.
-            </p>
-          </div>
-          <div class="tip">
-            <p>
-              <span class="title"
-                ><span class="icon">🐱‍🚀</span> <br /><strong
-                  >Wear Full Gear</strong
-                ></span
-              >
-              <br />
-              Always use proper riding gear, not just a helmet. Protective
-              clothing, gloves, and boots can significantly enhance your safety.
-            </p>
-          </div>
-          <div class="tip">
-            <p>
-              <span class="title"
-                ><span class="icon">💥</span> <br /><strong
-                  >Remember Your Checks</strong
-                ></span
-              >
-              <br />
-              Always perform thorough checks before maneuvering: check your
-              mirrors, signal your intentions, and look for blind spots.
-            </p>
-          </div>
-          <div class="tip">
-            <p>
-              <span class="title">
-                <span class="icon">📰</span>
+        <div class="buttons">
+          <button class="official-button" id="official-button">
+            Official CBT Information
+          </button>
+          <button class="training-button" id="training-button">
+            Find a Training centre
+          </button>
+        </div>
+        <!-- Section 5 -->
+        <div class="tips">
+          <h2 class="tips-header">Tips for new riders</h2>
+          <div class="tips-container">
+            <div class="tip">
+              <p>
+                <span class="title">
+                  <span class="icon">🦥</span> <br /><strong
+                    >Start Slow</strong
+                  ></span
+                >
                 <br />
-                <strong>Stay Informed</strong></span
-              >
-              <br />
-              Read up on road safety and motorcycle handling tips to enhance
-              your skills. Resources like
-              <a href="https://bikesafe.co.uk/">Bike Safe</a> offer great
-              information.
-            </p>
+                After earning your CBT certificate, take your time to practice
+                riding in safe, low-traffic areas to build your confidence.
+              </p>
+            </div>
+            <div class="tip">
+              <p>
+                <span class="title"
+                  ><span class="icon">🐱‍🚀</span> <br /><strong
+                    >Wear Full Gear</strong
+                  ></span
+                >
+                <br />
+                Always use proper riding gear, not just a helmet. Protective
+                clothing, gloves, and boots can significantly enhance your
+                safety.
+              </p>
+            </div>
+            <div class="tip">
+              <p>
+                <span class="title"
+                  ><span class="icon">💥</span> <br /><strong
+                    >Remember Your Checks</strong
+                  ></span
+                >
+                <br />
+                Always perform thorough checks before maneuvering: check your
+                mirrors, signal your intentions, and look for blind spots.
+              </p>
+            </div>
+            <div class="tip">
+              <p>
+                <span class="title">
+                  <span class="icon">📰</span>
+                  <br />
+                  <strong>Stay Informed</strong></span
+                >
+                <br />
+                Read up on road safety and motorcycle handling tips to enhance
+                your skills. Resources like
+                <a href="https://bikesafe.co.uk/">Bike Safe</a> offer great
+                information.
+              </p>
+            </div>
           </div>
         </div>
       </div>
