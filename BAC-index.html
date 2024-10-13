@@ -21,317 +21,419 @@
       href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"/>
     <title>Biggest Achievement 🏆 Challenge</title>
     <style>
-      body {
-        background-color: #ffffff;
-        font-family: "Questrial", sans-serif;
-        color: #363b4e;
-      }
 
-      main {
-        margin: 0 auto;
-      }
+body {
+color: #363b4e;
+background: linear-gradient(
+  -225deg, 
+  #2CD8D5 0%, 
+  #C5C1FF 56%, 
+  #FFBAC3 100%);
+}
 
-      .container {
-        max-width: 1080px;
-        margin: 20px auto;
-        padding: 20px;
-        border-radius: 20px;
-        display: block;
-        border: 1px solid;
-        border-color: #9a9a9a;
-      }
+main {
+margin: 0 auto;
+}
 
-      .title-container {
-        max-width: 100%;
-        padding: 0px;
-        background-color: #d6bcd4;
-        border: none;
-      }
+.page-subtitle {
+font-family: "Questrial", sans-serif;
+font-size: 16px;
+font-weight: bold;
+display: flex;
+margin-bottom: 5px;
+}
 
-      .grid-container {
-        max-width: 1080px;
-        display: grid;
-        grid-template-rows: auto;
-        gap: 20px;
-        padding: 0px;
-        margin: 0 auto;
-        border: none;
-      }
+.container {
+max-width: 1000px;
+margin: 20px auto;
+padding: 20px;
+border-radius: 20px;
+display: block;
+border: 1px solid;
+border-color: #8d8d8d3b;
+background-color: #9a9a9a4b;
+}
 
-      .intro-images {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 15px;
-        margin: 0 auto;
-        border: none;
-      }
+.title-container {
+max-width: 980px;
+padding: 5px;
+border: none;
+margin: 0 auto;
+text-align: center;
+flex: 1;
+}
 
-      .intro-images img {
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-      }
+.section-header {
+font-family: "Bungee", sans-serif;
+font-size: 35px;
+color: #352961;
+margin: 0;
+margin-bottom: 10px;
+}
 
-      .intro-images img:hover {
-        transform: scale(1.5);
-      }
+.flex-container {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+max-width: 980px;
+margin: 20px auto;
+}
 
-      .text-section {
-        text-align: center;
-        flex: 1;
-      }
+.bubble-journey-container,
+.bubble-photos-container {
+flex: 2;
+margin: 5px;
+background-color: #9796f17c;
+padding: 30px;
+padding-top: 15px;
+border-radius: 20px;
+font-family: "Albert Sans", sans-serif;
+font-size: 15px;
+width: 100%;
+max-width: 700px;
+line-height: 1.3;
+display: inline-block;
+text-align:left;
+}
 
-      .section-header {
-        margin: 0;
-        margin-bottom: 30px;
-        font-size: 30px;
-      }
+.bubble-journey-container h2,
+.bubble-photos-container h2{
+font-family: "Questrial", sans-serif;
+font-size: 23px;
+font-weight: bold;
+color: #352961;
+padding: 3px;
+}
 
-      .section-subheader {
-        margin: 5px 0;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
+.intro-images {
+display: flex;
+gap: 15px;
+justify-content: center;
+margin-top: 20px;
+}
 
-      .about-achievement-text {
-        margin: 10px 0;
-        font-size: 15px;
-        text-align: justify;
-        font-family: "Albert Sans", sans-serif;
-        padding-top: 7px;
-      }
+.image-container {
+position: relative;
+width: 200px;
+height: 200px;
+overflow: hidden;
+border-radius: 20px;
+}
 
-      .flex-container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        max-width: 1400px;
-        margin: 20px auto;
-      }
+.image-container img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.5s ease;
+}
 
-      .bubble-journey-container,
-      .bubble-cbt-container {
-        flex: 2;
-        margin: 5px;
-        background-color: #fafad6;
-        padding: 30px;
-        padding-top: 15px;
-        border-radius: 20px;
-        font-family: "Albert Sans", sans-serif;
-        font-size: 15px;
-        width: 100%;
-        max-width: 700px;
-      }
+.image-container:hover img {
+transform: scale(1.2);
+}
 
-      .official-button,
-      .training-button {
-        margin-top: 10px;
-        padding: 10px 15px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.7);
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+opacity: 0;
+transition: opacity 0.5s ease;
+border-radius: 20px;
+text-align: center;
+font-family: "Albert Sans", sans-serif;
+}
 
-      .official-button {
-        margin-left: 70px;
-      }
+.image-container:hover .overlay {
+opacity: 1;
+}
 
-      .training-button {
-        margin-left: 70px;
-      }
+.section-about-cbt {
+  border-top: 1px solid #8d8d8d3b;
+  margin-top: 20px;
+}
 
-      .official-button:hover,
-      .training-button:hover {
-        background-color: #0056b3;
-      }
+.about-cbt-text {
+font-family: "Albert Sans", sans-serif;
+font-size: 16px;
+text-align: justify;
+}
 
-      .tips-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        margin-top: 20px;
-      }
+.about-cbt-header {
+  font-family: "Questrial", sans-serif;
+  font-size: 23px;
+  color: #352961;
+}
 
-      .tip {
-        padding: 15px;
-        text-align: left;
-      }
+.learn-more {
+  border-top: 1px solid #8d8d8d3b;
+  margin-top: 20px;
+}
 
-      .title {
-        font-size: 22px;
-      }
+.feeling-inspired-header {
+  font-family: "Questrial", sans-serif;
+  font-size: 23px;
+  padding-bottom: 2px;
+  margin-bottom: 5px;
+  color: #352961;
+}
 
-      .icon {
-        font-size: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="fixed-bar">
-        <p class="logo">🏍 Blog</p>
-        <p class="menu"></p>
-      </div>
-    </header>
-    <main>
-      <div class="container">
-        <!-- Section 1 -->
-        <div class="title-container">
-          <div class="grid-container">
-            <div class="intro-images">
-              <img
-                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/137/original/MBR-motorbike.jpg?1727970699"
-                class="motorbike-me"
-                alt="Me on a motorbike"
-              />
-              <div class="text-section">
-                <h1 class="section-header">My Biggest Achievement</h1>
-                <h2 class="section-subheader">
-                  🏆 🛵 📜
-                  <br />
-                  <br />
-                  Earning a CBT Certificate
-                </h2>
-              </div>
-              <img
-                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/308/original/MBR-Motorbike2.jpg?1728056395"
-                class="motorbike-alone"
-                alt="Motorbike alone"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="flex-container">
-          <!-- Section 2 -->
-          <div class="bubble-journey-container">
-            <div class="section-journey">
-              <h2 class="journey-header">My CBT journey</h2>
-              <p class="journey-text">
-                I had always wanted to ride a motorbike, and in the UK,
-                completing a CBT is essential for riding on public roads. For
-                me, it wasn’t just about getting certified; it was about pushing
-                my limits and fulfilling a long-time dream. The training
-                challenged my focus, balance, and determination, but receiving
-                my certificate at the end of the day was incredibly rewarding.
-                Now, I’m excited to take the next step and pursue my full
-                motorcycle licence in the near future.
-              </p>
-            </div>
-          </div>
-          <!-- Section 3 -->
-          <div class="bubble-cbt-container">
-            <div class="section-about-cbt">
-              <h2 class="about-cbt-header">What is CBT?</h2>
-              <p class="about-cbt-text">
-                The CBT (Compulsory Basic Training) is a one-day course in the
-                United Kingdom that ensures new riders understand road safety,
-                bike control, and essential skills for riding a motorbike. Upon
-                successful completion, the DL196 certificate is awarded and
-                allows to ride on public roads for two years (with an L plate)
-                on motorbikes up to 125cc.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- Section 4 -->
-        <div class="section-about-cbt">
- <div class="intro-images">
-              <img
-                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/137/original/MBR-motorbike.jpg?1727970699"
-                class="motorbike-me"
-                alt="Me on a motorbike"
-              />
-              <img
-                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/308/original/MBR-Motorbike2.jpg?1728056395"
-                class="motorbike-alone"
-                alt="Motorbike alone"
-              />
-        </div>
-        <div class="buttons">
-          <button class="official-button" id="official-button">
-            Official CBT Information
-          </button>
-          <button class="training-button" id="training-button">
-            Find a Training centre
-          </button>
-        </div>
-        <!-- Section 5 -->
-        <div class="tips">
-          <h2 class="tips-header">Tips for new riders</h2>
-          <div class="tips-container">
-            <div class="tip">
-              <p>
-                <span class="title">
-                  <span class="icon">🦥</span> <br /><strong
-                    >Start Slow</strong
-                  ></span
-                >
-                <br />
-                After earning your CBT certificate, take your time to practice
-                riding in safe, low-traffic areas to build your confidence.
-              </p>
-            </div>
-            <div class="tip">
-              <p>
-                <span class="title"
-                  ><span class="icon">🐱‍🚀</span> <br /><strong
-                    >Wear Full Gear</strong
-                  ></span
-                >
-                <br />
-                Always use proper riding gear, not just a helmet. Protective
-                clothing, gloves, and boots can significantly enhance your
-                safety.
-              </p>
-            </div>
-            <div class="tip">
-              <p>
-                <span class="title"
-                  ><span class="icon">💥</span> <br /><strong
-                    >Remember Your Checks</strong
-                  ></span
-                >
-                <br />
-                Always perform thorough checks before maneuvering: check your
-                mirrors, signal your intentions, and look for blind spots.
-              </p>
-            </div>
-            <div class="tip">
-              <p>
-                <span class="title">
-                  <span class="icon">📰</span>
-                  <br />
-                  <strong>Stay Informed</strong></span
-                >
-                <br />
-                Read up on road safety and motorcycle handling tips to enhance
-                your skills. Resources like
-                <a href="https://bikesafe.co.uk/">Bike Safe</a> offer great
-                information.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script>
-      document.getElementById("official-button").onclick = function () {
-        window.open(
-          "https://www.gov.uk/motorcycle-cbt#:~:text=Compulsory%20basic%20training%20(%20CBT%20)%20is,that%20you%20pass%20or%20fail.",
-          "_blank"
-        );
-      };
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
 
-      document.getElementById("training-button").onclick = function () {
-        window.open("https://www.gov.uk/find-motorcycle-training", "_blank");
-      };
-    </script>
+.official-button,
+.training-button,
+.find-motorbike {
+padding: 10px 15px;
+background-color: #9896f1;
+color: #fff;
+box-shadow: 0px 8px 8px rgba(58, 46, 61, 0.562);
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-family: "Albert Sans", sans-serif;
+font-size: 14px;
+}
 
-    <footer>Coded by Marina Reggiani</footer>
-  </body>
+.official-button {
+margin-left: 0px;
+}
+
+.training-button,
+.find-motorbike {
+margin-left: 50px;
+}
+
+.official-button:hover,
+.training-button:hover,
+.find-motorbike:hover {
+background-color: #8f00b360;
+}
+
+.tips {
+border-top: 1px solid #8d8d8d3b;
+margin-top: 30px;
+padding: 0 auto;
+text-align: justify;
+}
+
+.tips-header{
+font-family: "Questrial", sans-serif;
+font-size: 23px;
+margin-bottom: 3px;
+color: #352961;
+}
+
+.tips-container {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+margin-top: 5px;
+margin-bottom: 0;
+}
+
+.tip {
+padding: 1px;
+text-align: left;
+font-family: "Albert Sans", sans-serif;
+font-size: 14px;
+}
+
+.tip a{
+text-decoration: none;
+color: #9d65c9;
+font-weight: bold;
+}
+
+.title {
+font-family: "Questrial", sans-serif;
+font-size: 20px;
+}
+
+.icon {
+font-size: 20px;
+}
+
+footer {
+text-align: center;
+margin: 15px 0;
+color: #363b4e;
+font-size: 12px;
+font-family: Helvetica;
+padding: 15px;
+}
+
+footer a {
+text-decoration: none;
+color: #9d65c9;
+}
+
+</style>
+</head>
+<body>
+<header>
+<div class="fixed-bar">
+<p class="page-subtitle">👩‍💻 Blog | My Biggest Achievement</p>
+</div>
+</header>
+<main>
+<div class="container">
+<!-- Section 1 -->
+<div class="title-container">
+<h2 class="section-header">
+🏆 two-wheel freedom </h2>
+</div>
+<!-- Section 2 -->
+<div class="flex-container">
+<div class="bubble-journey-container">
+<div class="section-journey">
+<h2 class="journey-header">My CBT journey</h2>
+<p class="journey-text">
+Obtaining my CBT certificate was a major milestone on my journey to becoming a motorbike rider. <br>
+After dreaming about riding for ages, I finally decided to go for it and signed up for training. 
+The process wasn’t a walk in the park; it challenged my focus and determination like never before. <br> 
+But when I finally got my certificate, I felt an incredible rush of accomplishment! 
+It proved to me that I could achieve what I set my mind to. 
+Now, I’m excited to take the next step and work towards my full motorcycle licence—bring on the open road!
+</p>
+</div>
+</div>
+<!-- Section 3 -->
+<div class="bubble-photos-container">
+<h2 class="journey-header">My CBT journey photos</h2>
+<div class="intro-images">
+<a href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/137/original/MBR-motorbike.jpg?1727970699" target="_blank">
+<div class="image-container">
+<img
+src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/137/original/MBR-motorbike.jpg?1727970699"
+class="motorbike-me"
+alt="Me on a motorbike"
+/>
+<div class="overlay">My motorbike and me</div>
+</div>
+</a>
+<a href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/308/original/MBR-Motorbike2.jpg?1728056395" target="_blank">
+<div class="image-container">
+<img
+src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/308/original/MBR-Motorbike2.jpg?1728056395"
+class="motorbike-alone"
+alt="Motorbike alone"
+/>
+<div class="overlay">My motorbike</div>
+</div>
+</a>
+</div>
+</div>
+<!-- Section 4 -->
+<div class="section-about-cbt">
+<div class="definition">
+<h2 class="about-cbt-header">What is CBT?</h2>
+<p class="about-cbt-text">
+The CBT (Compulsory Basic Training) is a one-day course in the
+United Kingdom that ensures new riders understand road safety,
+bike control, and essential skills for riding a motorbike. Upon
+successful completion, the DL196 certificate is awarded and
+allows to ride on public roads for two years (with an L plate)
+on motorbikes up to 125cc.
+</p>
+</div>
+<div class="learn-more">
+<h2 class="feeling-inspired-header">Feeling inspired? Learn more</h2>
+<div class="buttons">
+<button class="official-button" id="official-button">
+Official CBT Information</button>
+<button class="training-button" id="training-button">
+Find a Training centre
+</button>
+<button class="find-motorbike" id="find-motorbike">
+Choosing your first bike
+</button>
+</div>
+</div>
+<!-- Section 5 -->
+<div class="tips">
+<h2 class="tips-header">Tips for new riders</h2>
+<div class="tips-container">
+<div class="tip">
+<p>
+<span class="title">
+<span class="icon">🦥</span> <br /><strong>Start Slow</strong></span>
+<br />
+After earning your CBT certificate, take your time to practice
+riding in safe, low-traffic areas to build your confidence.
+</p>
+</div>
+<div class="tip">
+<p>
+<span class="title"><span class="icon">🐱‍🚀</span> <br /><strong>Wear Full Gear</strong></span>
+<br />
+Always use proper riding gear, not just a helmet. Protective
+clothing, gloves, and boots can significantly enhance your
+safety.
+</p>
+</div>
+<div class="tip">
+<p>
+<span class="title"><span class="icon">💥</span> <br /><strong>Checks!</strong></span>
+<br />
+Always perform thorough checks before maneuvering: check your
+mirrors, signal your intentions, and look for blind spots.
+</p>
+</div>
+<div class="tip">
+<p>
+<span class="title"><span class="icon">📰</span><br /><strong>Stay Informed</strong></span>
+<br />
+Read up on road safety and motorcycle handling tips to enhance
+your skills. websites like
+<a href="https://bikesafe.co.uk/">Bike Safe</a> offer great
+information.
+</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script>
+  document.getElementById("official-button").onclick = function () {
+    window.open(
+    "https://www.gov.uk/motorcycle-cbt#:~:text=Compulsory%20basic%20training%20(%20CBT%20)%20is,that%20you%20pass%20or%20fail.","_blank");
+    };
+
+  document.getElementById("training-button").onclick = function () {
+    window.open("https://www.gov.uk/find-motorcycle-training", "_blank");
+    };
+
+  document.getElementById("find-motorbike").onclick = function () {
+    window.open("https://www.bennetts.co.uk/bikesocial/news-and-views/advice/new-riders-and-training/picking-first-motorbike", "_blank");
+    };
+</script>
+
+<footer>
+  Coded by
+  <a href="https://www.shecodes.io/graduates/141390-marina-reggiani" target="_blank"><strong> Marina Reggiani</strong>
+  </a>| Open-sourced on
+  <a
+  href="https://github.com/dalecatup/Biggest-Achievement-Challenge"
+  target="_blank"
+  ><strong>Github</strong></a>
+  <br>
+  <br>
+  ⭐-_-💧 
+</footer>
+</body>
 </html>
